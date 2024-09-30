@@ -1,0 +1,8 @@
+Flask
+openai
+Werkzeug
+python-dotenv
+flask-cors
+python-chess
+chromadb
+gunicorn
