@@ -1,0 +1,28 @@
+version: '3'
+services:
+  web-client:
+    build: ./web-client
+    ports:
+      - "3000:3000"
+      - "8010:8010"
+    environment:
+      - REACT_APP_BACKEND_URL=http://api-server:5000
+    depends_on:
+      - api-server
+    networks:
+      - internal-net
+
+  api-server:
+    build: ./api-server
+    environment:
+      - ALLOWED_IP=web-client
+      - OPENAI_API_KEY=set-your-chatgpt-token-here
+      - STOCKFISH_PATH=stockfish/stockfish
+      - CHATGPT_VERSION=gpt-4o
+      - USE_RAG=False
+    networks:
+      - internal-net
+
+networks:
+  internal-net:
+    driver: bridge
