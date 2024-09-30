@@ -1,0 +1,109 @@
+.chessboard-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 20px;
+  width: 30%;
+}
+
+.chessboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #2d2d2d;
+  padding: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  border: 1px solid #444;
+  overflow: auto;
+  position: relative;
+}
+
+.reset-button {
+  margin-top: 5px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #444;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.reset-button:hover {
+  background-color: #555;
+}
+
+.flip-button {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 90%;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #444;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.flip-button:hover {
+  background-color: #555;
+}
+
+.controls {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.navigation-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.navigation-buttons button {
+  padding: 5px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #444;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-right: 10px;
+}
+
+.navigation-buttons button:hover {
+  background-color: #555;
+}
+
+#pgn {
+  margin-top: 10px;
+  width: 100%;
+  height: 150px;
+}
+
+.fen-input {
+  width: 100%;
+}
+
+.pgn-input {
+  margin-top: 50px;
+  width: 100%;
+}
+
+#fen {
+  margin-top: 10px;
+  width: 100%;
+  height: 70px;
+}
