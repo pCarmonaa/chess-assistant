@@ -87,9 +87,18 @@
   background-color: #555;
 }
 
-#pgn {
-  margin-top: 10px;
+#pgn,
+#fen {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #555;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 0.9rem;
   width: 100%;
+  height: 70px;
+}
+#pgn {  
   height: 150px;
 }
 
@@ -102,8 +111,109 @@
   width: 100%;
 }
 
-#fen {
+.stockfish-control {
+  margin-bottom: 20px;
+}
+
+.best-lines {
   margin-top: 10px;
   width: 100%;
-  height: 70px;
+}
+
+.best-lines .pgn-line {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #555;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  width: 100%;
+  height: 100px;
+  margin-bottom: 5px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+
+.score-display {
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.stockfish-control {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.stockfish-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #fff;
+  text-align: center;
+}
+
+.stockfish-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 20px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+.score-display-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  margin-left: 15px;
+}
+
+.chess-symbol {
+  font-size: 1.3rem;
+  vertical-align: middle;
+  margin-right: 2px;
 }
